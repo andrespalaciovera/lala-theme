@@ -1,0 +1,128 @@
+<header id="backContainer" style="background: url({{ 'i-i-lalaBack.png' | asset_url }}); background-position: center center;
+background-size: 130%; background-repeat: repeat-x;">
+
+      <div class="collapse navbar-collapse bg-primary" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link ms-2" href="#">Quienes somos</a>
+          <a class="nav-link ms-2" href="#">Café</a>
+          <a class="nav-link ms-2" href="#">Tienda</a>
+          <a class="nav-link dropdown-toggle ms-2" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="color: white;">
+            Activismo
+          </a>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body" id="dropdownMenu">
+              <ul id="dropdownLinst">
+                <li><a class="dropdown-item" href="#">Emprendimiento</a></li>
+                <li><a class="dropdown-item" href="#">Cáncer de mama</a></li>
+                <li><a class="dropdown-item" href="#">Protección animal</a></li>
+              </ul>
+            </div>
+          </div>
+          <a class="nav-link ms-2" href="#">Historias</a>
+          <a class="nav-link ms-2" href="#">Puntos de venta</a>
+        </div>
+      </div>
+
+      <section class="carouselContainer" style="background: url({{ 'i-i-carouselContainer.png' | asset_img_url: '1360x'}}); background-position: center;">
+        <div class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div id="carouselExampleSlidesOnly" class="carousel-inner">
+
+            <nav class="navbar navbar-expand-lg navbar-light" id="navBar">
+
+              <img src="{{ 'i-i-nav.png' | asset_url }}" alt="" class="img-fluid" id="mainImg">            
+              
+              <div class="container-fluid" id="myNav">
+    
+                <div class="together" >
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+    
+                  <a class="navbar-brand ms-3" href="#" id="navBrand" >
+                  <img src="{{ 'i-lala-logo-orange.png' | asset_url }}" alt="" height="30" class="d-inline-block align-text-top" >
+                  </a>
+                  
+                 
+                  <ul class="navbar-nav hiddenableLink">
+                    {% for link in linklists.main-menu.links %}
+                      {% assign child_list_handle = link.title | handleize %}
+                      {% if linklists[child_list_handle].links != blank %}
+                          <li class="nav-item">
+                            <a class="hiddenableLink mx-2" href="{{ link.url }}">{{ link.title }}</a>
+                          </li>
+                        [{% for childlink in linklists[child_list_handle].links %}
+                          <li class="nav-item">
+                            <a class="hiddenableLink mx-2" href="{{ childlink.url }}">{{ childlink.title | escape }}</a>
+                          </li>
+                        {% endfor %}]
+                        {% else %}
+                          <li class="nav-item">
+                            <a class="hiddenableLink mx-2" href="{{ link.url }}">{{ link.title }}</a>
+                          <li class="nav-item">
+                    {% endif %}
+                  {% endfor %}
+                    <li class="nav-item"><a class="hiddenableLink mx-2" href="#">Café</a></li>
+                    <li class="nav-item"><a class="hiddenableLink mx-2" href="#">Quienes somos</a></li>
+                    <li class="nav-item"><a class="hiddenableLink mx-2" href="#">Tienda</a></li>
+                    <li class="nav-item">
+                      <div class="hiddenableLink dropdown">
+                        <a class="hiddenableLink dropbtn">Activismo</a>
+                        <div class="dropdown-content">
+                          <a href="#">Emprendimiento</a>
+                          <a href="#">Cáncer de mama</a>
+                          <a href="#">Protección animal</a>
+                        </div>
+                    </li>
+                    <li class="nav-item" style="display: inline;"><a class="hiddenableLink mx-2" href="#">Historias</a></li>
+                    <li class="nav-item" style="display: inline;"><a class="hiddenableLink mx-2" href="#">Puntos de venta</a></li>
+                  </ul>         
+                </div>
+    
+                  <div class="d-flex" id="unHiddenable">
+                    <a class="nav-link mx-1" aria-current="page" href="#"><img src="{{ 'ic-shopping-cart.png' | asset_url }}" alt="cart" id="header-icon-cart"></a>
+                    <a class="nav-link mx-1" href="#"><img src="{{ 'ic-login-face.png' | asset_url }}" alt="login" id="header-icon-signup"></a>
+                  </div>
+    
+              </div>
+    
+            </nav>
+
+
+            <div class="carousel-item active">
+              <img src="{{ 'i-i-uno.png' | asset_url }}" class="d-block w-100" alt="...">
+              <h1 id="USP">Por ti...</h1>
+              <h1 id="USP2">para todas</h1>
+            </div>
+
+            <div class="carousel-item">
+              <img src="{{ 'i-i-dos.png' | asset_url }}" class="d-block w-100" alt="...">
+              <h1 id="USP">Por ti...</h1>
+              <h1 id="USP2">para todas</h1>
+            </div>
+            
+            <div class="carousel-item">
+              <img src="{{ 'i-i-tres.png' | asset_url }}" class="d-block w-100" alt="...">
+              <h1 id="USP">Por ti...</h1>
+              <h1 id="USP2">para todas</h1>
+            </div>
+
+            </div>
+          </div>
+        </div>
+
+        
+        
+      </section>
+
+    </header>
+
+      {% if shop.customer_accounts_enabled %}
+    {% if customer %}
+      <a href="/account">account</a>
+      {{ 'log out'  | customer_logout_link }}
+    {% else %}
+      {{ 'log in ' | customer_login_link }}
+      {{ 'register' | customer_register_link }}
+    {% endif %}
+  {% endif %}
+  

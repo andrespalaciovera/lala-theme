@@ -1,0 +1,602 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    
+}
+
+
+/*-----------------------------------------------------------------------------Nav---------------------------------------------------------------*/
+
+/*#backContainer{
+    background: url({{ 'i-i-lalaBack.png' | asset_url }});
+    background-position: center center;
+    background-size: 130%;
+    background-repeat: repeat-x;
+}*/
+
+#navbarNavAltMarkup{
+    background: #521f85 !important;
+}
+
+.together ul, li{
+    display: inline;
+}
+
+#offcanvasTop{
+    background: none;
+    height: 200px;
+    border: none;
+}
+
+#aboutButton{
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+#aboutButton a{
+    display: flex;
+    justify-content: center;
+}
+
+#aboutButton a h6{
+    position: absolute;
+    z-index: 100;
+    top: 90%;
+    color: white;
+    filter: invert(10%);
+    font-weight: 500;
+}
+
+#dropdownMenu{
+    background: #250c3e;
+}
+
+#dropdownLinst{
+    list-style-type: none;
+}
+
+.carouselContainer{
+    background-image: url(./Assets/images/carouselContainer.png);
+    background-position: center;
+    
+    
+}
+
+@media (max-width: 678px) {
+    .carouselContainer{
+        background-size: 100%;
+        background-repeat: no-repeat;
+        
+    }
+    
+}
+
+#mainImg{
+    height: 100%;
+    
+}
+
+#caouselExapleSlidesOnly{
+    position: relative;
+    
+}
+
+#USP{
+    
+    position: absolute;
+    top: 50vh;
+    left: 50%;
+    transform: translate(-50%);    
+    text-align: left;
+    font-size: 4vw;
+    font-weight: 900;
+    color: #5f3285;    
+    overflow: hidden !important;
+    transition: 0.3s ease-in-out;
+}
+
+#USP{    
+    position: absolute;
+    top: 50vh;
+    left: 30%;
+    transform: translate(-50%);    
+    text-align: left;
+    font-size: 4vw;
+    font-weight: 900;
+    color: #5f3285;    
+    overflow: hidden !important;
+    transition: 0.3s ease-in-out;
+}
+
+#USP2{
+    
+    position: absolute;
+    top: 50vh;
+    right: 4%;
+    transform: translate(-50%);    
+    text-align: left;
+    font-size: 4vw;
+    font-weight: 900;
+    color: #5f3285;    
+    overflow: hidden !important;
+    transition: 0.3s ease-in-out;
+}
+
+#caouselExapleSlidesOnly .carousel-item img{
+    object-fit: cover;
+    
+}
+
+#navBar{
+    height: 40vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    
+}
+
+#navBar #mainImg{
+    height: 125px;
+    position: absolute;
+    top: 0;
+    object-fit: cover;
+    overflow: hidden;
+    
+}
+
+#myNav{
+    top: 1vh;
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+#unHiddenable img{
+    height: 5vh;
+    
+
+}
+
+#navBrand{
+    position: relative;
+    
+}
+
+.hiddenableLink{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.hiddenableLink:hover{
+    color: blueviolet;
+    
+}
+
+
+
+@media (max-width: 678px) {
+    #USP{
+        top: 12vh;
+    }
+
+    #USP2{
+        top: 12vh;
+    }
+
+    .hiddenableLink{
+        display: none;
+        
+    }    
+}
+
+.navbar-nav a{
+    color: white;
+    transition: 0.5s ease-in-out;
+    
+}
+
+.navbar-nav a:hover{
+    color: blueviolet;
+    
+}
+
+/*---------------------------------------------------------Dropdown--------------------------------------------------------------*/
+
+/* Dropdown Button */
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    text-decoration: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(240, 225, 255);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: blueviolet;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s ease-in-out;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {color: white;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}
+
+/*---------------------------------------------------------Dropdown--------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------/Nav---------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------Main---------------------------------------------------------------*/
+
+#partition{
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    
+}
+
+#partition img{
+    width: 30vw;
+    overflow: hidden;
+    
+}
+
+#tittleSegment{
+    display: flex;
+    justify-content: center;
+}
+
+#tittleSegment h1{
+font-weight: 900;
+color: #5f3285;
+}
+
+#tittleSegment #bestSellers {
+    font-weight: 900;
+    color: #fe8431;
+}
+
+/*-----------------------------------------------------------------------------CarouselProduct---------------------------------------------------------------*/
+
+
+
+#contFluid{
+    overflow: hidden !important;
+}
+
+#slider{
+    height: 500px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+
+
+}
+
+.myContainer{
+    width: 1600px;
+    margin: auto;    
+}
+
+.sub-container{
+    width: 100%;
+    margin: auto;
+    
+}
+
+.slider-wrapper{
+    position: relative !important;
+    
+}
+
+#controls{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+    top: 50% !important;
+    width: 100%;
+    
+}
+
+.previus i, .next i{
+    color: #fe8431;
+    font-size: 1rem;
+    
+}
+
+.previus, .next{
+    padding: 2px;
+    width: 30px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    transition: 0.3s ease-in-out;
+    
+}
+
+.previus:hover, .next:hover{
+    filter: invert(50%);
+    
+}
+
+
+@media (max-width:1600px){
+    .myContainer{
+        width: 100%;
+        
+    }
+}
+
+#contFluid, .my-slider{
+    height: 500px;
+    padding-top: 30px;
+    
+}
+
+
+.slide{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*-----------------------------------------------------------------------------/CarouselProduct---------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------NewCarouselProduct---------------------------------------------------------------*/
+.container{
+    position: relative;
+  }
+
+  #ColSlide{
+      display: flex;
+      justify-content: center;
+
+  }
+  
+  .container .card{
+    position: relative;
+    width: 40vh;
+    height: 58vh;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    border: none;
+  }
+  
+  .container .card:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fe8431;
+    clip-path: circle(150px at 50% 20%);
+    transition: 0.5s ease-in-out;
+  }
+  
+  .container .card:hover:before{
+    clip-path: circle(280px at 50% -10%);
+  }
+  
+  .container .card:after{
+    content: 'Lala';
+    position: absolute;
+    top: 30%;
+    left: -20%;
+    font-size: 12em;
+    font-weight: 200;
+    color: rgba(59, 59, 59, 0.05)
+  }
+  
+  .container .card .imgBx{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10000;
+    width: 100%;
+    height: 220px;
+    transition: 0.5s;
+  }
+  
+  .container .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(0%);
+      
+  }
+  
+  .container .card .imgBx img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) ;
+    width: 150%;
+  }
+  
+  .container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 10;
+  }
+  
+  .container .card:hover .contentBx{
+    height: 210px;
+  }
+  
+  .container .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #fe8431;
+    margin: 0;
+  }
+  
+  .container .card .contentBx .size, .container .card .contentBx .color {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: 0.5s;opacity: 0;
+    visibility: hidden;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  
+  .container .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.5s;
+  }
+  
+  .container .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0.6s;
+  }
+  
+  .container .card .contentBx .size h3{
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+
+  .container .card .contentBx .color h2{
+    color: #7d7585;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-right: 10px;
+  }
+  
+
+/*-----------------------------------------------------------------------------/NewCarouselProduct---------------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------Buttons---------------------------------------------------------------*/
+
+.curly{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.curly img{
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
+
+.buttonSection{
+    background: rgb(240, 225, 255) !important;
+    
+}
+
+.tittleWrapper  .myTittle2{
+    font-weight: bold !important;
+    color: white !important;
+    overflow-x: hidden !important;
+}
+
+#buttonMenu{
+    width: 20vw;
+    transition: 0.3s ease-in-out;
+    overflow-x: hidden !important;
+}
+
+#buttonMenu:hover{
+    filter: brightness(20%);
+    
+}
+
+/*-----------------------------------------------------------------------------/Buttons---------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------Video---------------------------------------------------------------*/
+
+#tittleVideo{
+    color: #5f3285;
+}
+
+/*-----------------------------------------------------------------------------/Video---------------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------------------------Footer---------------------------------------------------------------*/
+#footer{
+    background: #5f3285;
+    height: 400px;
+}
+
+#footer-logo img{
+    height: 80px;
+}
+
+#tittle-footer{
+    color: #fe8431;
+
+}
+
+.footLink a{
+    color: white;
+    text-decoration: none;
+}
+
+#footer-icon img{
+    height: 30px;
+}
+
+
+
+@media only screen and (min-width: 992px) {
+
+    #footer{
+
+        height: 150px;
+
+    }
+    
+}
+
+
+/*-----------------------------------------------------------------------------Footer---------------------------------------------------------------*/
